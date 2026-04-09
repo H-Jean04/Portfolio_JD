@@ -279,9 +279,14 @@ if (window.innerWidth > 768) {
 const tagEl = document.querySelector('.hero-tag');
 if (tagEl) {
   const texts = [
-    'Disponible pour stage / alternance',
+    'Disponible pour alternance',
     'Open to embedded systems roles',
-    'Systèmes embarqués & IoT'
+    'Octobre 2026 - Septembre 2029',
+    'Systèmes embarqués & IoT',
+    'Architecture logicielle & hardware embarquée',
+    'Contraintes temps réel & optimisation',
+    'Passionné par les systèmes embarqués',
+     'Passionate about embedded systems'
   ];
   let textIdx = 0;
   setInterval(() => {

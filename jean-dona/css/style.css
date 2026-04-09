@@ -9,17 +9,17 @@
   --bg: #060c18;
   --bg2: #0b1425;
   --bg3: #0f1d35;
-  --cyan: #00e5ff;
-  --green: #00ff88;
+  --cyan: #00d4ff; /* Nuance plus douce */
+  --green: #00cc88; /* Nuance plus subtile */
   --blue: #1565c0;
   --white: #f0f4ff;
   --muted: #5a7299;
   --card: rgba(11, 20, 37, 0.85);
-  --border: rgba(0, 229, 255, 0.15);
+  --border: rgba(0, 212, 255, 0.15); /* Ajusté pour la nouvelle --cyan */
   --font-display: 'Syne', sans-serif;
   --font-mono: 'Space Mono', monospace;
   --radius: 12px;
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 0.4s ease; /* Transition plus douce */
 }
 
 /* ---- RESET ---- */
@@ -175,7 +175,7 @@ img { max-width: 100%; }
 }
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 6vw, 5rem);
+  font-size: clamp(2.2rem, 5vw, 4.5rem); /* Réduit légèrement */
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
@@ -221,11 +221,15 @@ img { max-width: 100%; }
 .btn-primary {
   background: linear-gradient(135deg, var(--cyan), #0077ff);
   color: #000;
-  box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.15); /* Réduit l'intensité */
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 50px rgba(0, 229, 255, 0.35);
+  box-shadow: 0 6px 30px rgba(0, 212, 255, 0.25); /* Plus subtil */
+}
+.btn-primary:focus {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
 }
 .btn-outline {
   background: transparent;
@@ -295,6 +299,7 @@ img { max-width: 100%; }
   margin-bottom: 32px;
   display: flex;
   justify-content: center;
+  margin-left: 10px; /* Asymétrie subtile */
 }
 
 .hero-avatar img {
@@ -494,7 +499,7 @@ section { padding: 100px 0; }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  gap: 32px; /* Espacement plus équilibré */
 }
 .project-card {
   background: var(--card);
@@ -505,9 +510,9 @@ section { padding: 100px 0; }
   animation: fadeUp 0.6s ease both;
 }
 .project-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(0, 229, 255, 0.4);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 229, 255, 0.08);
+  transform: translateY(-6px); /* Réduit le mouvement */
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 212, 255, 0.08); /* Plus subtil */
 }
 .project-card.featured {
   border-color: rgba(0, 255, 136, 0.25);
